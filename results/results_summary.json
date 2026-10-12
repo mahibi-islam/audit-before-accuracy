@@ -1,0 +1,167 @@
+{
+  "dataset": {
+    "vendor_files": 5783,
+    "source_photos": 1452,
+    "independent_groups": 1447,
+    "canonical_n": 1441,
+    "class_counts": {
+      "1": 721,
+      "2": 468,
+      "3": 104,
+      "4": 57,
+      "5": 36,
+      "6": 19,
+      "7": 36
+    }
+  },
+  "audit": {
+    "test_leak_pct": 53.225806451612904,
+    "valid_leak_pct": 53.75494071146245,
+    "ambiguous_groups": 6,
+    "colour_only_vendor": {
+      "accuracy": 0.45564516129032256,
+      "macro_f1": 0.4063151541460928,
+      "balanced_acc": 0.45613071410620304,
+      "QWK": 0.721988269228347,
+      "MAE": 0.9112903225806451,
+      "adjacent_acc": 0.8024193548387096,
+      "binary_le2_vs_ge3": 0.8225806451612904,
+      "binary_chance": 0.5080645161290323
+    },
+    "colour_only_audited": {
+      "accuracy": 0.44433599809091995,
+      "macro_f1": 0.26401919716455446,
+      "balanced_acc": 0.3275744236199115,
+      "QWK": 0.4441721317379702,
+      "MAE": 1.0996086385872808,
+      "adjacent_acc": 0.7339004892017659
+    }
+  },
+  "best_model_overall": "ResNet50 + CORN",
+  "final_model": "ResNet50 + CORN",
+  "temperature": 1.867612958616578,
+  "split_lock": "dc94878c954130dc3aa7140dae1043de7f5660f27d41f910b7ec846a3f51e193",
+  "QUICK_RUN_smoke_test_not_reportable": false,
+  "locked_test": {
+    "QWK": 0.8914121105852263,
+    "MAE": 0.31141868512110726,
+    "macro_f1": 0.6409899394000776,
+    "balanced_acc": 0.6518671298306558,
+    "accuracy": 0.7197231833910035,
+    "adjacent_acc": 0.9757785467128027,
+    "ECE": 0.09661505803106223
+  },
+  "residual_similarity": [
+    {
+      "kept": "all test images",
+      "n": 289,
+      "QWK": 0.891,
+      "MAE": 0.311,
+      "macro_f1": 0.641,
+      "accuracy": 0.72
+    },
+    {
+      "kept": "no dev neighbour within 6 bits",
+      "n": 282,
+      "QWK": 0.892,
+      "MAE": 0.312,
+      "macro_f1": 0.642,
+      "accuracy": 0.72
+    },
+    {
+      "kept": "no dev neighbour within 8 bits",
+      "n": 275,
+      "QWK": 0.894,
+      "MAE": 0.309,
+      "macro_f1": 0.64,
+      "accuracy": 0.724
+    },
+    {
+      "kept": "no dev neighbour within 10 bits",
+      "n": 238,
+      "QWK": 0.891,
+      "MAE": 0.34,
+      "macro_f1": 0.646,
+      "accuracy": 0.697
+    },
+    {
+      "kept": "no dev neighbour within 12 bits",
+      "n": 176,
+      "QWK": 0.889,
+      "MAE": 0.369,
+      "macro_f1": 0.638,
+      "accuracy": 0.67
+    }
+  ],
+  "locked_test_ci": {
+    "QWK": [
+      0.8318884816985666,
+      0.9272448370691673
+    ],
+    "MAE": [
+      0.25259515570934254,
+      0.3771626297577855
+    ],
+    "macro_f1": [
+      0.5326585957652586,
+      0.7384443157324623
+    ],
+    "balanced_acc": [
+      0.5455577460121498,
+      0.7747473142708513
+    ],
+    "accuracy": [
+      0.671280276816609,
+      0.7716262975778547
+    ],
+    "adjacent_acc": [
+      0.9550173010380623,
+      0.9930795847750865
+    ]
+  },
+  "leakage_ablation": {
+    "vendor": {
+      "QWK": 0.9721817162086371,
+      "MAE": 0.14516129032258066,
+      "macro_f1": 0.8934902616017169,
+      "balanced_acc": 0.8918266478692296,
+      "accuracy": 0.8709677419354839
+    },
+    "audited": {
+      "QWK": 0.8914121105852263,
+      "MAE": 0.31141868512110726,
+      "macro_f1": 0.6409899394000776,
+      "balanced_acc": 0.6518671298306558,
+      "accuracy": 0.7197231833910035
+    },
+    "vendor_model_on_unseen_subset": null
+  },
+  "config": {
+    "SEED": 1337,
+    "PHASH_THRESHOLD": 5,
+    "EXCLUDE_AMBIGUOUS": true,
+    "IMG_SIZE": 224,
+    "N_CLASSES": 7,
+    "ONE_IMAGE_PER_GROUP": true,
+    "TEST_FRACTION": 0.2,
+    "N_FOLDS": 5,
+    "N_REPEATS": 1,
+    "BATCH_SIZE": 32,
+    "EPOCHS_HEAD": 15,
+    "EPOCHS_FINETUNE": 35,
+    "LR_HEAD": 0.001,
+    "LR_FINETUNE": 1e-05,
+    "FINETUNE_FROM": "conv4_block1_1_conv",
+    "FREEZE_BN_ON_FINETUNE": true,
+    "EARLY_STOP_PATIENCE": 10,
+    "MONITOR": "val_qwk",
+    "LABEL_SMOOTHING": 0.05,
+    "USE_CLASS_WEIGHTS": true,
+    "N_BOOTSTRAP": 2000,
+    "QUICK_RUN": false,
+    "RUN_LEAKAGE_ABLATION": true,
+    "OUT_DIR": "/content/outputs",
+    "DRIVE_BACKUP": null,
+    "BENCH_FOLDS": 3
+  }
+}

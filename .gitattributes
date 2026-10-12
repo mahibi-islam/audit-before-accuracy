@@ -1,0 +1,9 @@
+# The SHA-256 lock is computed over the exact bytes of the split manifest:
+# never let git rewrite line endings in the released manifests.
+data/splits/*.csv -text
+*.ipynb text eol=lf
+*.py    text eol=lf
+*.md    text eol=lf
+*.pdf   binary
+*.png   binary
+*.jpg   binary

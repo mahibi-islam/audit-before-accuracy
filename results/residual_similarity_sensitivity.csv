@@ -1,0 +1,6 @@
+kept,n,QWK,MAE,macro_f1,accuracy
+all test images,289,0.891,0.311,0.641,0.72
+no dev neighbour within 6 bits,282,0.892,0.312,0.642,0.72
+no dev neighbour within 8 bits,275,0.894,0.309,0.64,0.724
+no dev neighbour within 10 bits,238,0.891,0.34,0.646,0.697
+no dev neighbour within 12 bits,176,0.889,0.369,0.638,0.67

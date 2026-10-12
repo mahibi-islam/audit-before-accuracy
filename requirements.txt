@@ -1,0 +1,11 @@
+# Full notebook (GPU recommended). scripts/verify_audit.py needs only the first five.
+numpy
+pandas>=1.5
+scipy
+scikit-learn
+pillow
+matplotlib
+opencv-python
+tensorflow>=2.16
+# optional: dataset download via API
+# roboflow

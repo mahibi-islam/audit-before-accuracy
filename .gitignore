@@ -1,0 +1,30 @@
+# dataset images (CC BY 4.0, download from Roboflow -- see data/README.md)
+data/raw/
+data/splits/figures/
+
+# training outputs that are too large for git
+*.h5
+*.keras
+*.zip
+results/figures/*.tmp
+
+# local material not intended for publication
+_archive/
+
+# python / jupyter
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+.env
+
+# OS / editors
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# original Colab bundle (contents copied into results/)
+CSE463_results_bundle/

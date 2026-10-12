@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this audit, the locked split or the code, please cite it as below."
+title: "Audit Before Accuracy: Explainable Ordinal Deep Learning for Androgenetic Alopecia Severity Grading on a Leakage-Corrected Benchmark"
+type: software
+authors:
+  - given-names: Mahibi
+    family-names: Islam
+    affiliation: "BRAC University"
+date-released: 2026-09-21
+license: MIT
+keywords:
+  - androgenetic alopecia
+  - ordinal regression
+  - data leakage
+  - shortcut learning
+  - Grad-CAM
+  - CORN

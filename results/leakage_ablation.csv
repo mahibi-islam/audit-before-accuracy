@@ -1,0 +1,5 @@
+protocol,n_test,QWK,MAE,macro_f1,balanced_acc,accuracy,adjacent_acc
+A · vendor split (as published),248,0.972,0.145,0.893,0.892,0.871,0.988
+B · audited protocol (11),289,0.891,0.311,0.641,0.652,0.72,0.976
+"— colour-only, vendor split",248,0.722,0.911,0.406,0.456,0.456,0.802
+"— colour-only, audited split",289,0.444,1.1,0.264,0.328,0.444,0.734
